@@ -1,7 +1,7 @@
-version: "3"
 services:
   books:
     image: nginx:alpine
+    mem_limit: 50m
     restart: unless-stopped
     ports:
       - "8200:80"
@@ -11,6 +11,7 @@ services:
   logs:
     image: nginx:alpine
     restart: unless-stopped
+    mem_limit: 50m
     ports:
       - "8100:80"
     volumes:
